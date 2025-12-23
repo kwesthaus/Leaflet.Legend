@@ -228,6 +228,11 @@
             this._link.title = "Legend";
             this._link.href = "#";
 
+            this._buildContents();
+        },
+
+        _buildContents: function () {
+
             var title = L.DomUtil.create("h3", "leaflet-legend-title", this._contents);
             title.innerText = this.options.title || "Legend";
 
@@ -344,7 +349,7 @@
 
         redraw: function () {
             L.DomUtil.empty(this._contents);
-            this._buildLegendItems();
+            this._buildContents();
         },
     });
 
