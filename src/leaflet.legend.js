@@ -351,6 +351,13 @@
             L.DomUtil.empty(this._contents);
             this._buildContents();
         },
+
+
+        addLegend: function (legend) {
+            this._legendSymbols = [];
+            this.options.legends.push(legend);
+            this.redraw();
+        },
     });
 
     L.control.legend = L.control.Legend = function (options) {
